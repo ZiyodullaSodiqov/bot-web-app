@@ -1,24 +1,19 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { useEffect } from 'react'
+
+const tele = window.Telegram.WebApp;
 
 function App() {
+
+  useEffect(()=>{
+    tele.ready();
+  })
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <React.Fragment>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd-sXFuYKNQ9opDkYv1gtxSSIx94VDSZxtEs2LmlF_5c1rUFg/viewform?embedded=true" style={{width:"100%", height:"8025px"}} frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>
+      </React.Fragment>
   );
 }
 
